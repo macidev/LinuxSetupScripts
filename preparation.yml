@@ -1,0 +1,9 @@
+- name: Preparations
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Change Sudoers to no Password
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers
+        state: present
+        line: mcimander ALL=(ALL) NOPASSWD:ALL
