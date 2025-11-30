@@ -8,5 +8,5 @@
         state: latest
     - name: Install
       ansible.builtin.dnf5:
-        name: ""
+        name: "tuba"
         state: present
